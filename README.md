@@ -215,7 +215,7 @@ This is a **live demo to show how the bot works** (paste/upload JSON, click _San
    Then open: **http://127.0.0.1:5000/**
 
 2. **Hosted demo (GitHub Pages):**  
-   https://suhanii2310.github.io/pii_sanitizer_bot/frontend/
+   https://suhanii2310.github.io/pii_sanitizer_bot/page/
 
 > The GitHub Pages demo is UI-only. For real processing, run the Flask API locally (or deploy it) and point the UI to that endpoint.
 
