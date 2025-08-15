@@ -1,0 +1,28 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Build / dist / caches
+dist/
+build/
+.eggs/
+
+# Not for git
+.env
+*.env
+outputs/
+*.log
+*.tmp
+*.sqlite
+.ipynb_checkpoints/
+
+# Frontend build (if you build later)
+frontend/node_modules/

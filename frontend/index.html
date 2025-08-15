@@ -1,0 +1,76 @@
+<!-- RDA_BOTS/pii_sanitizer_bot/frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PII Sanitizer Bot — Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PII Detection & Sanitization Demo</h1>
+      <p>
+        Paste JSON rows, choose an action, and see side-by-side before/after
+        with an audit log.
+      </p>
+    </header>
+
+    <section class="panel">
+      <div class="controls">
+        <div class="control">
+          <label for="method">Global override (optional):</label>
+          <select id="method">
+            <option value="">Use per-type policy</option>
+            <option value="mask">mask</option>
+            <option value="tokenize">tokenize</option>
+            <option value="redact">redact</option>
+            <option value="scramble">scramble</option>
+          </select>
+        </div>
+        <div class="control">
+          <button id="btnSample">Load sample</button>
+          <input type="file" id="fileInput" accept=".json" />
+        </div>
+      </div>
+
+      <textarea
+        id="jsonInput"
+        placeholder='[{"name":"Alice", "email":"alice@example.com"}]'
+      ></textarea>
+
+      <div class="actions">
+        <button id="btnSanitize">Sanitize</button>
+        <button id="btnDownloadJson" disabled>Download JSON</button>
+        <button id="btnDownloadCsv" disabled>Download CSV</button>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="col">
+        <h2>Before</h2>
+        <div id="before"></div>
+      </div>
+      <div class="col">
+        <h2>After</h2>
+        <div id="after"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Audit log</h2>
+      <div id="audit"></div>
+    </section>
+
+    <footer>
+      <small
+        >Types covered:
+        <strong
+          >names, emails, phones, SSNs, credit cards, addresses</strong
+        ></small
+      >
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

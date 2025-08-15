@@ -1,0 +1,28 @@
+extension:
+  namespace: suhani
+  type: piisanitizer
+  version: 25.07.11
+  description: PII detection bot
+  default_name: pii
+  publisher: Suhani
+  support_email: gotosuhani@gmail.com
+  implementation:
+    code: pii_sanitizer.SanitizeBot
+
+runtime:
+  type: python3.7
+  packages:
+    - pandas==1.3.5
+    - faker==15.3.4
+    - presidio-analyzer==2.2.2
+
+bots:
+  - name: detect-and-sanitize
+    description: Detect and sanitize PII
+    bot_type: sink-updates
+    model_type: api
+    model_parameters:
+      - name: method
+        description: Method of sanitization (masking/tokenization)
+        type: text
+        mandatory: true
