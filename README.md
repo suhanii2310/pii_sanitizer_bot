@@ -206,18 +206,13 @@ You can also provide:
 
 This is a **live demo to show how the bot works** (paste/upload JSON, click _Sanitize_, and see **Before/After** with an **Audit**).
 
-**Two ways to open it:**
+**How to open it:**
 
 1. **Run locally (recommended for full API):**
 
    python app.py
 
    Then open: **http://127.0.0.1:5000/**
-
-2. **Hosted demo (GitHub Pages):**  
-   https://suhanii2310.github.io/pii_sanitizer_bot/page/
-
-> The GitHub Pages demo is UI-only. For real processing, run the Flask API locally (or deploy it) and point the UI to that endpoint.
 
 ---
 
