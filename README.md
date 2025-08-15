@@ -202,6 +202,25 @@ You can also provide:
 
 ---
 
+## Live Demo
+
+This is a **live demo to show how the bot works** (paste/upload JSON, click _Sanitize_, and see **Before/After** with an **Audit**).
+
+**Two ways to open it:**
+
+1. **Run locally (recommended for full API):**
+
+   python app.py
+
+   Then open: **http://127.0.0.1:5000/**
+
+2. **Hosted demo (GitHub Pages):**  
+   https://suhanii2310.github.io/pii_sanitizer_bot/frontend/
+
+> The GitHub Pages demo is UI-only. For real processing, run the Flask API locally (or deploy it) and point the UI to that endpoint.
+
+---
+
 ## TL;DR
 
 The bot finds six kinds of PII, protects them according to your policy, gives you a clean dataset + an audit trail, and uses deterministic tokens so analytics still work.
